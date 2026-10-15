@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil | Giovanna</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf7ff;
+      color: #392d4b;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 45px 20px;
+      color: white;
+      background: linear-gradient(135deg, #7554ad, #c4afea);
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 15px;
+      border: 5px solid white;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #e8dcff;
+    }
+
+    .avatar svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 7px 16px;
+      border: 1px solid #ffffff88;
+      border-radius: 30px;
+      background: #ffffff25;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      background: white;
+      box-shadow: 0 3px 12px #392d4b12;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #7554ad;
+      font-weight: bold;
+      padding: 7px 12px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      background: #eee5ff;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    section {
+      margin-bottom: 38px;
+      scroll-margin-top: 80px;
+    }
+
+    h2 {
+      color: #7554ad;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .painel {
+      padding: 24px;
+      background: white;
+      border: 1px solid #e7dcf8;
+      border-radius: 20px;
+      box-shadow: 0 7px 20px #49336c0c;
+    }
+
+    .grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid #e7dcf8;
+      border-radius: 20px;
+      box-shadow: 0 7px 20px #49336c0c;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .ilustracao {
+      display: block;
+      width: 100%;
+      height: 180px;
+    }
+
+    .conteudo {
+      padding: 20px;
+    }
+
+    .conteudo h3 {
+      color: #7554ad;
+      margin-bottom: 8px;
+    }
+
+    .conteudo p {
+      margin-bottom: 12px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: #eee5ff;
+      color: #694b9d;
+      padding: 5px 10px;
+      margin: 3px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .hobbies span {
+      padding: 9px 13px;
+      border-radius: 12px;
+      background: #eee5ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      background: #eee5ff;
+      color: #694b9d;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      main {
+        padding: 22px 13px;
+      }
+
+      .painel {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <!-- AVATAR ILUSTRADO, SEM PRECISAR DE ARQUIVO -->
+    <div class="avatar">
+      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <rect width="160" height="160" fill="#e8dcff"/>
+        <circle cx="80" cy="80" r="65" fill="#d4c0f2"/>
+        <path d="M29 160 Q30 105 80 105 Q130 105 131 160" fill="#8b6fc4"/>
+        <path d="M42 75 Q32 20 80 18 Q130 20 118 80 L112 112 L47 112Z" fill="#49312f"/>
+        <ellipse cx="80" cy="72" rx="31" ry="39" fill="#c98766"/>
+        <path d="M48 65 Q42 23 79 23 Q117 21 113 65 Q91 55 79 38 Q66 57 48 65" fill="#49312f"/>
+        <circle cx="68" cy="73" r="3" fill="#392624"/>
+        <circle cx="92" cy="73" r="3" fill="#392624"/>
+        <path d="M71 89 Q80 97 89 89" fill="none" stroke="#8f514a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M54 113 L80 132 L106 113 L119 160 L41 160Z" fill="#fff"/>
+        <path d="M42 160 Q46 123 65 119 L80 132 L95 119 Q115 123 119 160" fill="#a18bd1"/>
+      </svg>
+    </div>
+
+    <h1>Olá, eu sou a Giovanna!</h1>
+    <p>Estudante, curiosa e apaixonada por aprender, criar e descobrir coisas novas.</p>
+    <span class="tag">Meu cantinho na internet ✨</span>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre mim</a>
+    <a href="#formacao">Formação</a>
+    <a href="#interesses">Interesses</a>
+    <a href="#projetos">Projetos</a>
+  </nav>
+
+  <main>
+
+    <section id="sobre">
+      <h2>💜 Sobre mim</h2>
+      <div class="painel">
+        <p>
+          Tenho 16 anos e moro em Candeias, Bahia. Estudo no SESI
+          Candeias e gosto de explorar ideias que unam criatividade,
+          tecnologia e impacto positivo na vida das pessoas.
+        </p>
+        <p>
+          Minha trajetória escolar começou no Centro Educacional
+          Criança Feliz, onde estudei até o 5º ano. Depois, continuei
+          meus estudos no SESI, onde estudo atualmente.
+        </p>
+      </div>
+    </section>
+
+    <section id="formacao">
+      <h2>📚 Formação e aprendizados</h2>
+
+      <div class="grade">
+
+        <article class="card">
+          <svg class="ilustracao" viewBox="0 0 320 180"
+               xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="180" fill="#eee5ff"/>
+            <circle cx="260" cy="35" r="25" fill="#d6c5f3"/>
+            <rect x="45" y="132" width="230" height="10" rx="4" fill="#9b82d0"/>
+            <rect x="62" y="78" width="48" height="54" rx="3" fill="#8b6fc4"/>
+            <rect x="114" y="60" width="48" height="72" rx="3" fill="#c3afea"/>
+            <rect x="166" y="88" width="48" height="44" rx="3" fill="#a18bd1"/>
+            <path d="M72 91 H100 M72 101 H100 M124 74 H152 M124 84 H152 M124 94 H152"
+                  stroke="white" stroke-width="3"/>
+            <rect x="218" y="54" width="45" height="35" rx="4" fill="white" stroke="#8b6fc4" stroke-width="3"/>
+            <path d="M226 65 H255 M226 74 H249" stroke="#8b6fc4" stroke-width="3"/>
+          </svg>
+
+          <div class="conteudo">
+            <h3>Cursos e pesquisa</h3>
+            <p>
+              Concluí o curso da FEBRACE “Metodologia da Pesquisa e
+              Orientação de Projetos de Iniciação Científica” e também
+              um curso de Tecnologia da Informação do SENAI.
+            </p>
+            <span class="etiqueta">Pesquisa científica</span>
+            <span class="etiqueta">Tecnologia</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <svg class="ilustracao" viewBox="0 0 320 180"
+               xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="180" fill="#e7e0ff"/>
+            <rect x="45" y="25" width="230" height="125" rx="10" fill="#72549e"/>
+            <rect x="55" y="35" width="210" height="100" rx="5" fill="#30263e"/>
+            <circle cx="68" cy="47" r="4" fill="#efb9ed"/>
+            <circle cx="82" cy="47" r="4" fill="#bce6d7"/>
+            <path d="M95 65 L82 78 L95 91 M115 91 L132 65 M147 68 H235 M147 82 H217 M147 96 H229"
+                  fill="none" stroke="#d6c5f3" stroke-width="4" stroke-linecap="round"/>
+            <path d="M135 150 H185 L200 163 H120Z" fill="#a18bd1"/>
+          </svg>
+
+          <div class="conteudo">
+            <h3>Tecnologia e criatividade</h3>
+            <p>
+              Gosto de aprender ferramentas digitais e transformar
+              ideias em projetos que possam ajudar outras pessoas.
+            </p>
+            <span class="etiqueta">HTML</span>
+            <span class="etiqueta">CSS</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="interesses">
+      <h2>🎧 Coisas de que gosto</h2>
+
+      <div class="painel">
+        <div class="hobbies">
+          <span>📚 Ler</span>
+          <span>🎵 Ouvir música</span>
+          <span>🐶 Brincar com meu cachorro</span>
+          <span>🎤 Cantar</span>
+          <span>🏛️ Aprender sobre história</span>
+          <span>🎬 Filmes e séries</span>
+        </div>
+
+        <p><strong>Filmes favoritos:</strong> Diário de uma Paixão e Como Treinar o Seu Dragão.</p>
+        <p><strong>Livro marcante:</strong> Santa Clara de Assis.</p>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>✨ Meus projetos</h2>
+
+      <div class="grade">
+
+        <!-- PROJETO 1: TRIAGGO -->
+        <article class="card">
+          <svg class="ilustracao" viewBox="0 0 320 180"
+               xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="180" fill="#e2f4ef"/>
+            <circle cx="160" cy="90" r="70" fill="#c3e9df"/>
+            <rect x="112" y="22" width="96" height="140" rx="16" fill="white" stroke="#549e8d" stroke-width="4"/>
+            <rect x="123" y="40" width="74" height="105" rx="7" fill="#e9f8f4"/>
+            <path d="M160 58 V99 M139 79 H181" stroke="#4b9e8c" stroke-width="10" stroke-linecap="round"/>
+            <text x="160" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#367f72">TRIAGGO</text>
+          </svg>
+
+          <div class="conteudo">
+            <h3>TRIAGGO</h3>
+            <p>
+              Plataforma digital de saúde pensada para facilitar o
+              acesso aos serviços de saúde. A proposta inclui cadastro,
+              registro de sintomas, orientação inicial, busca de
+              unidades, agendamentos e histórico de atendimentos.
+            </p>
+            <span class="etiqueta">Saúde digital</span>
+            <span class="etiqueta">Pesquisa científica</span>
+          </div>
+        </article>
+
+        <!-- PROJETO 2: SITE PESSOAL -->
+        <article class="card">
+          <svg class="ilustracao" viewBox="0 0 320 180"
+               xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="180" fill="#eee5ff"/>
+            <rect x="38" y="22" width="244" height="136" rx="10" fill="white" stroke="#9b82d0" stroke-width="3"/>
+            <path d="M38 48 H282" stroke="#c8b7ee" stroke-width="3"/>
+            <circle cx="52" cy="35" r="3" fill="#9b82d0"/>
+            <circle cx="63" cy="35" r="3" fill="#9b82d0"/>
+            <rect x="54" y="61" width="80" height="80" rx="5" fill="#ded0f8"/>
+            <circle cx="94" cy="83" r="14" fill="#9b82d0"/>
+            <path d="M71 127 Q94 92 117 127" fill="#9b82d0"/>
+            <path d="M150 69 H260 M150 84 H244 M150 99 H252 M150 120 H220"
+                  stroke="#b9a4e7" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+
+          <div class="conteudo">
+            <h3>Meu perfil em HTML e CSS</h3>
+            <p>
+              Site pessoal para apresentar minha trajetória,
+              meus interesses e meus projetos usando HTML e CSS.
+            </p>
+            <span class="etiqueta">HTML</span>
+            <span class="etiqueta">CSS</span>
+          </div>
+        </article>
+
+        <!-- PROJETO 3: INOVACAO -->
+        <article class="card">
+          <svg class="ilustracao" viewBox="0 0 320 180"
+               xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="180" fill="#f1eaff"/>
+            <circle cx="143" cy="77" r="52" fill="#d8c9f5"/>
+            <path d="M124 90 Q112 78 116 61 A28 28 0 0 1 172 61 Q176 78 163 90 L159 104 H129Z"
+                  fill="#9b82d0"/>
+            <path d="M132 109 H157 M136 117 H153" stroke="#71549f" stroke-width="5" stroke-linecap="round"/>
+            <path d="M144 24 V15 M105 39 L98 32 M183 39 L190 32"
+                  stroke="#71549f" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="225" cy="117" r="25" fill="#b8a1e5"/>
+            <circle cx="225" cy="117" r="9" fill="#f1eaff"/>
+            <path d="M225 84 V77 M225 157 V150 M192 117 H185 M265 117 H258"
+                  stroke="#71549f" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+
+          <div class="conteudo">
+            <h3>Ideias de inovação tecnológica</h3>
+            <p>
+              Espaço para desenvolver propostas criativas que utilizem
+              a tecnologia para resolver problemas do dia a dia.
+            </p>
+            <span class="etiqueta">Inovação</span>
+            <span class="etiqueta">Criatividade</span>
+          </div>
+        </article>
+
+        <!-- PROJETO 4: VILLA PET -->
+        <article class="card">
+          <svg class="ilustracao" viewBox="0 0 320 180"
+               xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="180" fill="#fff0e7"/>
+            <circle cx="160" cy="90" r="66" fill="#ffddc8"/>
+            <!-- Cachorrinho -->
+            <path d="M85 68 L76 40 Q74 30 85 37 L111 53 M127 53 L147 37 Q156 31 154 44 L149 72"
+                  fill="#b97b58"/>
+            <ellipse cx="116" cy="83" rx="36" ry="39" fill="#d79a71"/>
+            <ellipse cx="116" cy="96" rx="20" ry="15" fill="#f4d2b8"/>
+            <circle cx="105" cy="79" r="3" fill="#53382f"/>
+            <circle cx="127" cy="79" r="3" fill="#53382f"/>
+            <ellipse cx="116" cy="92" rx="4" ry="3" fill="#53382f"/>
+            <!-- Gatinho -->
+            <path d="M178 63 L175 38 L198 53 L222 38 L220 65" fill="#8e6cb8"/>
+            <circle cx="199" cy="85" r="32" fill="#b7a0d8"/>
+            <circle cx="189" cy="81" r="3" fill="#44364e"/>
+            <circle cx="209" cy="81" r="3" fill="#44364e"/>
+            <path d="M194 94 Q199 99 204 94" stroke="#44364e" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <div class="conteudo">
+            <h3>Villa Pet</h3>
+            <p>
+              Conceito de pet shop em Candeias, Bahia, dedicado ao
+              conforto, à segurança e ao cuidado especializado de
+              cães e gatos, com carinho e dedicação.
+            </p>
+            <span class="etiqueta">Pets</span>
+            <span class="etiqueta">Cuidado animal</span>
+          </div>
+        </article>
+
+        <!-- PROJETO 5: AGENDAMENTO DE SAUDE -->
+        <article class="card">
+          <svg class="ilustracao" viewBox="0 0 320 180"
+               xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="180" fill="#e8f0ff"/>
+            <rect x="72" y="30" width="176" height="125" rx="12" fill="white" stroke="#829bd0" stroke-width="4"/>
+            <path d="M72 60 H248" stroke="#829bd0" stroke-width="4"/>
+            <path d="M111 20 V42 M209 20 V42" stroke="#829bd0" stroke-width="7" stroke-linecap="round"/>
+            <g fill="#c6d4f5">
+              <rect x="91" y="73" width="27" height="19" rx="4"/>
+              <rect x="129" y="73" width="27" height="19" rx="4"/>
+              <rect x="167" y="73" width="27" height="19" rx="4"/>
+              <rect x="205" y="73" width="27" height="19" rx="4"/>
+              <rect x="91" y="103" width="27" height="19" rx="4"/>
+              <rect x="129" y="103" width="27" height="19" rx="4"/>
+              <rect x="167" y="103" width="27" height="19" rx="4"/>
+            </g>
+            <rect x="205" y="103" width="27" height="19" rx="4" fill="#7b96d1"/>
+            <path d="M210 111 L216 116 L227 106" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+
+          <div class="conteudo">
+            <h3>Agendamento digital de saúde para Candeias</h3>
+            <p>
+              Proposta de sistema acessível para facilitar o
+              agendamento de consultas e exames e ajudar a reduzir
+              filas nos serviços de saúde.
+            </p>
+            <span class="etiqueta">Saúde pública</span>
+            <span class="etiqueta">Acessibilidade</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Feito com carinho em HTML e CSS 💜
+    <br>
+    Meu perfil pessoal
+  </footer>
+
+</body>
+</html>
